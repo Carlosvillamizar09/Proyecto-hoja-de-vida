@@ -1,2 +1,115 @@
+@font-face {
+  font-family: 'MiTipografia';
+  src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+}
+#mi-foto {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: aparecerFoto 1s ease-out;
+  }
+  
+  
+  .mi-foto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes aparecerFoto {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+:root {
+  --color-fondo: #f9f9f9;
+  --color-primario: #ff0000;
+  --color-secundario: #000000;
+  --color-texto: #333;
+  --color-blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'MiTipografia', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: var(--color-primario);
+  animation: aparecer 1.2s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header p {
+  font-size: 1.1em;
+  color: var(--color-secundario);
+}
+
+section {
+  background-color: var(--color-blanco);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+section h2 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-primario);
+  padding-bottom: 5px;
+}
+
+a {
+  color: var(--color-primario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secundario);
+}
+
 
 
